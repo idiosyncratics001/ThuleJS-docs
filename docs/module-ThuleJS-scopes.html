@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>ThuleJS-scopes - ThuleJS</title>
+    
+    
+    
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/idiosyncratics001" target="_blank" class="menu-item" id="website_link" >github</a></h2><h2><a href="https://www.npmjs.com/~idiosyncratics" target="_blank" class="menu-item" id="forum_link" >npm repository</a></h2><h3>Modules</h3><ul><li><a href="module-ThuleJS-env.html">ThuleJS-env</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.getMeta">getMeta</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.getEnv">getEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setEnv">setEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.updateEnv">updateEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.delEnv">delEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setCheckIn">setCheckIn</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setStrict">setStrict</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setProcessEnv">setProcessEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setIntrinsics">setIntrinsics</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setGlobal">setGlobal</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setLockdown">setLockdown</a></li></ul></li><li><a href="module-ThuleJS-event.html">ThuleJS-event</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getEventTag">getEventTag</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getResponseMap">getResponseMap</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.addResponse">addResponse</a></li></ul></li><li><a href="module-ThuleJS-scopes.html">ThuleJS-scopes</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.getMeta">getMeta</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.findScopes">findScopes</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.getScopes">getScopes</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.buildScopes">buildScopes</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="eventError.html">eventError</a></li><li><a href="eventReferenceError.html">eventReferenceError</a></li><li><a href="eventSyntaxError.html">eventSyntaxError</a></li><li><a href="eventTypeError.html">eventTypeError</a></li></ul><h3>Namespaces</h3><ul><li><a href="std.html">std</a><ul class='methods'><li data-type='method' style='display: none;'><a href="std.html#.findSubObj">findSubObj</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-ThuleJS-env.html">ThuleJS-env</a></li><li><a href="tutorial-ThuleJS-event.html">ThuleJS-event</a></li><li><a href="tutorial-ThuleJS-scopes.html">ThuleJS-scopes</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">ThuleJS-scopes</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext"><p><b>Managing scopes containing functions and classes.</b> </br></p></div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p><b>Managing scopes containing functions and classes.</b> </br></p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_thulejs-scopes_index.mjs.html">node_modules/thulejs-scopes/index.mjs</a>, <a href="node_modules_thulejs-scopes_index.mjs.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version"><ul class="dummy"><li>1.0.3</li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Raymon van Dolder</li>
+        </ul>
+    </dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>// The scopes structure will be the same as directory/file structure.
+// example file structure:
+./scopes
+|-std.js
+|-utils
+     |-file
+         |-copyFile.js
+
+import scopes from 'thulejs-scopes';
+
+scopes.init()
+
+// -or-
+
+const scopesOptions ={
+  path: '',
+  dir: '',
+  preload: true
+}
+
+scopes.init(scopesOptions);</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".init"><span class="type-signature type-signature-static">(static) </span>init<span class="signature">(options)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>By default if no scopes path and/or dir is given, it will look for 'scopes' in the app root directory. </br>
+In previous versions a scopes directory was created if not present, however this practice is discontinued and an error is thrown instead. </br></br>
+<b>Pre-loading scopes:</b> </br>
+By default the preload is disabled. </br>
+If you use preload, all scopes are loaded at start, responses after are better as imports are already done. </br>
+Use the build commands to build and cache scopes. getScope() will use cached items if available. </br>
+So if you care more about speed or memory consumption, this offers some flexibility. </br></p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_thulejs-scopes_index.mjs.html">node_modules/thulejs-scopes/index.mjs</a>, <a href="node_modules_thulejs-scopes_index.mjs.html#line47">line 47</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>options object</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>path of the scopes directory if not app root</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dir</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>directory name if not 'scopes'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>preload</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>load all the scopes in scopes directory on start.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getMeta"><span class="type-signature type-signature-static">(static) </span>getMeta<span class="signature">(&hellip;arguments)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>returns the name/version/settings of ThuleJS-scopes -or-  meta of a scope</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_thulejs-scopes_index.mjs.html">node_modules/thulejs-scopes/index.mjs</a>, <a href="node_modules_thulejs-scopes_index.mjs.html#line85">line 85</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>scopes.getMeta();
+// returns:
+name: 'ThuleJS-scopes',
+{
+ version: '1.0.3',
+ path: '/idiosyncratics/scopes/',
+ active: 2025-01-04T17:01:02.648Z,
+ preload: true
+}
+
+scopes.getMeta('std')
+// returns:
+{
+ { scope: 'std', type: 'function', name: 'getDateTime', args: '' },
+ { scope: 'std', type: 'function', name: 'isFunction', args: 'thing' },
+ { scope: 'std', type: 'function', name: 'isClass', args: 'variable' },
+
+scopes.getMeta('file', 'copyFile'))
+ {
+   scope: 'file',
+   type: 'function',
+   name: 'copyFile',
+   args: 'source, target, cb'
+ } </code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>arguments</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">args</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>nul -or- scopename -or- parent and scopename</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>null</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">null</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>no arguments, returns the name/version/settings of ThuleJS-scopes.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scopename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>only scopename, returns the meta of the first found scope in the structure.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>parent and scopename, returns the meta of the first found scope in the parent node.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>information object</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".findScopes"><span class="type-signature type-signature-static">(static) </span>findScopes<span class="signature">(&hellip;scopename)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Returns the entire scope -or- scope in scope object </br>
+Returns 'scope not active' if scope is not loaded. </br>
+See getScopes() to load and cache scopes on demand. </br></p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_thulejs-scopes_index.mjs.html">node_modules/thulejs-scopes/index.mjs</a>, <a href="node_modules_thulejs-scopes_index.mjs.html#line103">line 103</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>scopes.findScope()
+scopes.findScope('std', 'file') 
+scopes.findScope('std', 'file', ['utils','xml'])</code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scopename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">args</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>null</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">null</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>returns entire scope if pre-loaded or 'scopes not (p)reload'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scopename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>returns the first found scopename -or- scopenames in the structure</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>[parent, scopename] returns the first found scopename in the parent</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>object with functions</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".getScopes"><span class="type-signature type-signature-static">(static) </span>getScopes<span class="signature">(&hellip;scopename)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Returns the entire scope -or- scope in scope object </br>
+If the scope is not loaded, it will do so on demand and cache the scope.</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_thulejs-scopes_index.mjs.html">node_modules/thulejs-scopes/index.mjs</a>, <a href="node_modules_thulejs-scopes_index.mjs.html#line119">line 119</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>scopes.getScopes()
+scopes.getScopes('std') 
+scopes.getScopes('utils','xml')</code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scopename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">args</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>null returns 'incorrect number of arguments'</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scopename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>only scopename, returns the first found scope in the structure</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>parent and scopename, returns the first found scope in the parent node</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>object with functions</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".buildScopes"><span class="type-signature type-signature-static">(static) </span>buildScopes<span class="signature">(&hellip;scopename)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Rebuild the entire scope -or- scope </br>
+If a scope is altered and must be rebuild on demand.</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="node_modules_thulejs-scopes_index.mjs.html">node_modules/thulejs-scopes/index.mjs</a>, <a href="node_modules_thulejs-scopes_index.mjs.html#line132">line 132</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scopename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">args</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>null</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">null</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>rebuild the entire scope --[ use with caution ]--</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scopename</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>only scopename, rebuild the first found scope in the structure.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>parent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>parent and scopename, rebuild the first found scope in the parent node.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>message of result</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

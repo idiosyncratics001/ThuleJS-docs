@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>scopes/std.js - ThuleJS</title>
+    
+    
+    
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/idiosyncratics001" target="_blank" class="menu-item" id="website_link" >github</a></h2><h2><a href="https://www.npmjs.com/~idiosyncratics" target="_blank" class="menu-item" id="forum_link" >npm repository</a></h2><h3>Modules</h3><ul><li><a href="module-ThuleJS-env.html">ThuleJS-env</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.getMeta">getMeta</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.getEnv">getEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setEnv">setEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.updateEnv">updateEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.delEnv">delEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setCheckIn">setCheckIn</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setStrict">setStrict</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setProcessEnv">setProcessEnv</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setIntrinsics">setIntrinsics</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setGlobal">setGlobal</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-env.html#.setLockdown">setLockdown</a></li></ul></li><li><a href="module-ThuleJS-event.html">ThuleJS-event</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getEventTag">getEventTag</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getResponseMap">getResponseMap</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.addResponse">addResponse</a></li></ul></li><li><a href="module-ThuleJS-scopes.html">ThuleJS-scopes</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.getMeta">getMeta</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.findScopes">findScopes</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.getScopes">getScopes</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-scopes.html#.buildScopes">buildScopes</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="eventError.html">eventError</a></li><li><a href="eventReferenceError.html">eventReferenceError</a></li><li><a href="eventSyntaxError.html">eventSyntaxError</a></li><li><a href="eventTypeError.html">eventTypeError</a></li></ul><h3>Namespaces</h3><ul><li><a href="std.html">std</a><ul class='methods'><li data-type='method' style='display: none;'><a href="std.html#.findSubObj">findSubObj</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-ThuleJS-env.html">ThuleJS-env</a></li><li><a href="tutorial-ThuleJS-event.html">ThuleJS-event</a></li><li><a href="tutorial-ThuleJS-scopes.html">ThuleJS-scopes</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">scopes/std.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @namespace std */
+
+/**
+ * @memberof std
+ * @param {object} obj object containing key:value
+ * @param {string} keyToMatch key to find in object
+ * @returns {(object | null)}
+ */
+function findSubObj(obj, keyToMatch) {
+    if (typeof obj !== 'object') return null; // base case: not an object
+
+    if (obj[keyToMatch]) return obj[keyToMatch] // found the matching key
+
+    for (const [key, value] of Object.entries(obj)) {
+        if (typeof value === 'object') {
+        const result = findSubObj(value, keyToMatch); // recursive search in nested object
+        if (result !== null) return result; 
+        }
+    }
+    return null; // not found
+}//||
+
+function findAndReplace(obj, parentKey, keyToMatch, replacement) {
+    if (typeof obj !== 'object') return null;
+
+    // If parentKey is null or undefined, directly look for keyToMatch
+    if (parentKey === null || parentKey === undefined) {
+        if (keyToMatch in obj) {
+        obj[keyToMatch] = replacement;
+        return obj;
+    }
+    } else {
+        // If parentKey is not null or undefined, look for it in obj
+        if (parentKey in obj) {
+            // If parentKey is found, look for keyToMatch in obj
+            if (keyToMatch in obj[parentKey]) {
+                obj[parentKey][keyToMatch] = replacement;
+                return obj;
+            }
+        }
+    }
+  
+    // If keyToMatch is not found, recursively search in nested objects
+    for (const [key, value] of Object.entries(obj)) {
+      if (typeof value === 'object') {
+        const result = findAndReplace(value, parentKey, keyToMatch, replacement);
+        if (result !== null) return result;
+      }
+    }
+  
+    return null; // not found
+}//||
+
+function getDateTime(){
+    return new Date().toLocaleString('en-US',{hour12: false}).replace(/,/, '').replaceAll(/\//g, '-')
+}//||
+
+
+
+
+
+
+function isFunction(thing){
+    return Object.prototype.toString.call(thing) === '[object Function]' || '[object Undefined]'
+}//||
+
+function isClass(variable) {
+    return typeof variable === 'function' &amp;&amp;
+           variable.toString().includes('class') &amp;&amp;
+           variable.prototype &amp;&amp;
+           variable.prototype.constructor === variable;
+}//||
+
+
+
+
+function copyFile(source, target, cb) {
+    var cbCalled = false;
+  
+    var rd = fs.createReadStream(source);
+    rd.on("error", function(err) {
+      done(err);
+    });
+    var wr = fs.createWriteStream(target);
+    wr.on("error", function(err) {
+      done(err);
+    });
+    wr.on("close", function(ex) {
+      done();
+    });
+    rd.pipe(wr);
+  
+    function done(err) {
+      if (!cbCalled) {
+        cb(err);
+        cbCalled = true;
+      }
+    }
+  }//||</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

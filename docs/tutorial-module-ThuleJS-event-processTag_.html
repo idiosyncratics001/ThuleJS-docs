@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Tutorial: module-ThuleJS-event-processTag - ThuleJS</title>
+    
+    
+    
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://myproject.com" target="_blank" class="menu-item" id="website_link" >ThuleJS Website</a></h2><h2><a href="https://myproject.com.forum" target="_blank" class="menu-item" id="forum_link" >Forums</a></h2><h3>Modules</h3><ul><li><a href="module-ThuleJS-event.html">ThuleJS-event</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getEventTag">getEventTag</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getResponseMap">getResponseMap</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.addResponse">addResponse</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="module-ThuleJS-event-processTag.html">processTag</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-ThuleJS-event.html">ThuleJS-event</a></li><li><a href="tutorial-ThuleJS-scopes.html">ThuleJS-scopes</a></li><li><a href="tutorial-ThulesJS-env.html">ThulesJS-env</a></li><li><a href="tutorial-index_.html">index</a></li><li><a href="tutorial-index.mjs.html">index.mjs</a></li><li><a href="tutorial-index.mjs_.html">index.mjs_</a></li><li><a href="tutorial-module-ThuleJS-event-processTag_.html">module-ThuleJS-event-processTag</a></li><li><a href="tutorial-module-ThuleJS-event_.html">module-ThuleJS-event</a></li><li><a href="tutorial-tutorial-ThuleJS-event.html">tutorial-ThuleJS-event</a></li><li><a href="tutorial-tutorial-ThuleJS-scopes.html">tutorial-ThuleJS-scopes</a></li><li><a href="tutorial-tutorial-ThulesJS-env.html">tutorial-ThulesJS-env</a></li><li><a href="tutorial-tutorial-index.mjs.html">tutorial-index.mjs</a></li><li><a href="tutorial-tutorial-index_.html">tutorial-index_</a></li><li><a href="tutorial-tutorial-module-ThuleJS-event-processTag_.html">tutorial-module-ThuleJS-event-processTag_</a></li><li><a href="tutorial-tutorial-module-ThuleJS-event_.html">tutorial-module-ThuleJS-event_</a></li><li><a href="tutorial-tutorial-tutorial-ThulesJS-env.html">tutorial-tutorial-ThulesJS-env</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: module-ThuleJS-event-processTag</h1>
+    
+
+    <section>
+
+<header>
+    
+
+    <h2>module-ThuleJS-event-processTag</h2>
+</header>
+
+<article>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>processTag - ThuleJS</title>
+    
+    
+    
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://myproject.com" target="_blank" class="menu-item" id="website_link" >ThuleJS Website</a></h2><h2><a href="https://myproject.com.forum" target="_blank" class="menu-item" id="forum_link" >Forums</a></h2><h3>Modules</h3><ul><li><a href="module-ThuleJS-event.html">ThuleJS-event</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getEventTag">getEventTag</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getResponseMap">getResponseMap</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.addResponse">addResponse</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="module-ThuleJS-event-processTag.html">processTag</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-ThuleJS-event.html">ThuleJS-event</a></li><li><a href="tutorial-ThuleJS-scopes.html">ThuleJS-scopes</a></li><li><a href="tutorial-ThulesJS-env.html">ThulesJS-env</a></li><li><a href="tutorial-index_.html">index</a></li><li><a href="tutorial-index.mjs.html">index.mjs</a></li><li><a href="tutorial-module-ThuleJS-event-processTag_.html">module-ThuleJS-event-processTag</a></li><li><a href="tutorial-module-ThuleJS-event_.html">module-ThuleJS-event</a></li><li><a href="tutorial-tutorial-ThulesJS-env.html">tutorial-ThulesJS-env</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">processTag</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-ThuleJS-event.html">ThuleJS-event</a>~</span>
+        
+        
+            processTag
+        
+        </h2>
+        
+            <div class="class-description usertext"><p>format event: Takes the event and places all items in placeholders and adds meta information</p></div>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="processTag"><span class="type-signature"></span>new processTag<span class="signature">(level, type, event)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.mjs_.html">index.mjs</a>, <a href="index.mjs_.html#line88">line 88</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>level</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>level of the event</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>specific type of the event (Error, ReferenceError, TypeError etc.)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Parsed event to be formatted</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
+</article>
+
+</section>
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

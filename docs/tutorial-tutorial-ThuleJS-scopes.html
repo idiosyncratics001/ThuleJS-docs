@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Tutorial: tutorial-ThuleJS-scopes - ThuleJS</title>
+    
+    
+    
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://myproject.com" target="_blank" class="menu-item" id="website_link" >ThuleJS Website</a></h2><h2><a href="https://myproject.com.forum" target="_blank" class="menu-item" id="forum_link" >Forums</a></h2><h3>Modules</h3><ul><li><a href="module-ThuleJS-event.html">ThuleJS-event</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getEventTag">getEventTag</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getResponseMap">getResponseMap</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.addResponse">addResponse</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="module-ThuleJS-event-processTag.html">processTag</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-ThuleJS-event.html">ThuleJS-event</a></li><li><a href="tutorial-ThuleJS-scopes.html">ThuleJS-scopes</a></li><li><a href="tutorial-ThulesJS-env.html">ThulesJS-env</a></li><li><a href="tutorial-index_.html">index</a></li><li><a href="tutorial-index.mjs.html">index.mjs</a></li><li><a href="tutorial-index.mjs_.html">index.mjs_</a></li><li><a href="tutorial-module-ThuleJS-event-processTag_.html">module-ThuleJS-event-processTag</a></li><li><a href="tutorial-module-ThuleJS-event_.html">module-ThuleJS-event</a></li><li><a href="tutorial-tutorial-ThuleJS-event.html">tutorial-ThuleJS-event</a></li><li><a href="tutorial-tutorial-ThuleJS-scopes.html">tutorial-ThuleJS-scopes</a></li><li><a href="tutorial-tutorial-ThulesJS-env.html">tutorial-ThulesJS-env</a></li><li><a href="tutorial-tutorial-index.mjs.html">tutorial-index.mjs</a></li><li><a href="tutorial-tutorial-index_.html">tutorial-index_</a></li><li><a href="tutorial-tutorial-module-ThuleJS-event-processTag_.html">tutorial-module-ThuleJS-event-processTag_</a></li><li><a href="tutorial-tutorial-module-ThuleJS-event_.html">tutorial-module-ThuleJS-event_</a></li><li><a href="tutorial-tutorial-tutorial-ThulesJS-env.html">tutorial-tutorial-ThulesJS-env</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: tutorial-ThuleJS-scopes</h1>
+    
+
+    <section>
+
+<header>
+    
+
+    <h2>tutorial-ThuleJS-scopes</h2>
+</header>
+
+<article>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Tutorial: ThuleJS-scopes - ThuleJS</title>
+    
+    
+    
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://myproject.com" target="_blank" class="menu-item" id="website_link" >ThuleJS Website</a></h2><h2><a href="https://myproject.com.forum" target="_blank" class="menu-item" id="forum_link" >Forums</a></h2><h3>Modules</h3><ul><li><a href="module-ThuleJS-event.html">ThuleJS-event</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.init">init</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getEventTag">getEventTag</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.getResponseMap">getResponseMap</a></li><li data-type='method' style='display: none;'><a href="module-ThuleJS-event.html#.addResponse">addResponse</a></li></ul></li></ul><h3>Classes</h3><ul><li><a href="module-ThuleJS-event-processTag.html">processTag</a></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-ThuleJS-event.html">ThuleJS-event</a></li><li><a href="tutorial-ThuleJS-scopes.html">ThuleJS-scopes</a></li><li><a href="tutorial-ThulesJS-env.html">ThulesJS-env</a></li><li><a href="tutorial-index_.html">index</a></li><li><a href="tutorial-index.mjs.html">index.mjs</a></li><li><a href="tutorial-module-ThuleJS-event-processTag_.html">module-ThuleJS-event-processTag</a></li><li><a href="tutorial-module-ThuleJS-event_.html">module-ThuleJS-event</a></li><li><a href="tutorial-tutorial-ThulesJS-env.html">tutorial-ThulesJS-env</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: ThuleJS-scopes</h1>
+    
+
+    <section>
+
+<header>
+    
+
+    <h2>ThuleJS-scopes</h2>
+</header>
+
+<article>
+    <h2>ThuleJS-Scopes</h2>
+<p>Managing scopes containing functions and classes.</p>
+<hr>
+<p>ES6/Module styled | functions and classes distribution throughout your application.</p>
+<blockquote>
+<p><strong>The why is power:</strong><br>
+I needed a place for my tools. If it's more than a tool, it should be a module.</p>
+<p><em>--with love, quirks and glitches, Idiosyncratics</em></p>
+</blockquote>
+</br>
+<p><strong>Get thulejs-scopes</strong></p>
+<pre class="prettyprint source"><code>npm install thulejs-scopes
+</code></pre>
+<p><strong>See example</strong><br>
+<em>Example included in the repository.</em></p>
+</br>
+<p><strong>Usage</strong><br>
+<em>Add an scopes directory to your project root and place here .js or .mjs files.<br>
+The directory structure will be identical to scopes structure.</em></p>
+<p><em>Import the module and add the config:</em></p>
+<pre class="prettyprint source"><code>import scopes from 'thulejs-scopes';
+new scopes();
+</code></pre>
+<p><em>That's it!, your scopes content is now available.</em><br>
+<br/></p>
+<h3>Get, Find, Build commands</h3>
+<p><strong>Get commands to view your scopes meta.</strong><br>
+<em>returns an information object</em></p>
+<pre class="prettyprint source"><code>// returns the name/version/settings of scopes:
+scopes.getMeta();
+
+// returns an warning if scope is not loaded
+
+// get the scope meta:
+scopes.getMeta('std')
+
+// Get meta in &lt;parent> from &lt;scope>
+scopes.getMeta('customScript', 'xml'))          
+</code></pre>
+<p><strong>Find commands to retrieve scopes from cache.</strong><br>
+<em>returns an scope object</em><br>
+<em>Provides a safe way to retrieve the scopes.</em></p>
+<pre class="prettyprint source"><code>// must have scopename, returns a warning
+scopes.findScopes()                       
+
+// returns an warning if scope is not loaded
+
+// get the first found scope in the structure
+scopes.findScopes('xml')                  
+
+// if a double name exists in the scope and you want to specify:
+// from &lt;parent> get &lt;scopename>
+
+scopes.findScopes('myModule', 'xml')    
+</code></pre>
+<p><strong>Get commands to return scopes content.</strong><br>
+<em>returns an scope object</em><br>
+<em>Will pull from file if not preload or cached (new object)</em></p>
+<pre class="prettyprint source"><code>// returns the entire scopes content:
+// by default preload is disabled, a warning is returned.
+scopes.getScopes()
+
+// get the first found scope in the structure:
+scopes.getScopes('std')
+
+// get these two scopes, first found:
+scopes.getScopes('std', 'utils')
+
+// in this example 'utils' will contain mulitple scopes
+</code></pre>
+<p><strong>Build commands to rebuild and cache scopes.</strong><br>
+<em>returns a message</em><br>
+<em>Will pull from file if not preload or cached. Scope is then cached</em></p>
+<pre class="prettyprint source"><code>// rebuild the entire scope if preload
+scopes.buildScopes()        
+                        
+// must have scopename, a warning is returned
+scopes.buildScopes('std')
+
+// rebuild scope from file, specify from &lt;parent> get &lt;scopename>                           
+scopes.buildScopes('customScript', 'xml')           
+</code></pre>
+<p><strong>Pre-loading scopes:</strong></p>
+<p><em>By default the preload is disabled.<br>
+If you use preload, all scopes are loaded at start, responses after are better as imports are already done.<br>
+<br/>
+Use the build commands to build and cache scopes. getScope() will use cached items if available.<br>
+<br/>
+So if you care more about speed or memory consumption, this offers some flexibility.</em></p>
+<hr>
+<br/>
+<h3>Options and settings</h3>
+<p>Set ThuleJS-scopes options:</p>
+<p><em>Pass an options object:</em></p>
+<pre class="prettyprint source"><code>new scopes();
+
+// -or-
+
+const scopesOptions ={
+    path: '',
+    dir: '',
+    preload: true
+}
+new scopes(scopesOptions);
+</code></pre>
+<p><em>By default if no scopes path and/or dir is given, it will look for 'scopes' in the app root directory.<br>
+In previous versions a scopes directory was created if not present, however this practice is discontinued and an error is thrown instead.
+<br/></em></p>
+<h3>Scope usage example</h3>
+<p><em>Also see the examples in the repository.<br>
+Functions, classes and arrow functions must be closed with //|| or #checked.<br>
+For functions #function, for classes #class and for arrow functions #arrow</em></p>
+<pre class="prettyprint source"><code>function myFunction (...args){
+
+}//#checked
+
+
+function myFunction (..args){
+
+}//||
+
+function myFunction (...args){
+
+}//#function
+
+class myClass {
+
+}//#class
+
+
+const square = x => x * x //||
+
+const function = (test) => { console.log(&quot;An arrow function.&quot;); }//#checked
+
+const add = (a, b) => a + b //#arrow
+</code></pre>
+<p><em>The functions are parsed through an AST (abstract syntax tree) to validate the function by <a href="https://github.com/acornjs/acorn">Acorn</a>.<br>
+Invalid functions are skipped.</em></p>
+<h3>Scope file repository</h3>
+<p><em>The only thing parsed are .js and .mjs, however all files will have their filepaths stored in the scopes.</em></p>
+</article>
+
+</section>
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
+</article>
+
+</section>
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
